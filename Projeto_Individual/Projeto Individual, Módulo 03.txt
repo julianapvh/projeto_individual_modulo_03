@@ -1,0 +1,79 @@
+﻿#link para o arquivo no google docs, se necessário: https://docs.google.com/document/d/12Cf-PSpzeOEPLzzE86y0nkigTXJm567gW1lClBUsL20/edit?usp=sharing
+
+
+1. Quais são as entidades necessárias?
+
+
+Empresas, Tecnologias, Empresas_Tecnologias e Colaboradores.
+
+
+2. Quais são os principais campos e seus respectivos tipos?
+
+
+Empresas:
+
+
+ID: INTEGER (PK)
+Nome: VARCHAR
+Endereço: VARCHAR
+Contato: VARCHAR
+
+
+Tecnologias:
+
+
+ID: INTEGER (PK)
+Nome: VARCHAR
+Área: VARCHAR
+
+
+Empresas_Tecnologias:
+
+
+ID_Empresa: INTEGER (FK)
+ID_Tecnologia: INTEGER (FK)
+
+
+Colaboradores:
+
+
+ID: INTEGER (PK)
+Nome: VARCHAR
+Cargo: VARCHAR
+ID_Empresa: INTEGER (FK)
+
+
+3. Como essas entidades estão relacionadas?
+
+
+A tabela Empresas tem um relacionamento um-para-muitos com a tabela Colaboradores, onde uma empresa pode ter vários colaboradores, e cada colaborador pertence a uma única empresa.
+A tabela Empresas tem um relacionamento muitos-para-muitos com a tabela Tecnologias por meio da tabela de relacionamento Empresas_Tecnologias. Isso permite que uma empresa utilize várias tecnologias e uma tecnologia possa ser utilizada por várias empresas.
+
+
+
+
+
+
+
+
+4. Simule 2 registros para cada entidade.
+
+
+Empresas:
+  
+
+
+
+Tecnologias:
+  
+
+
+
+
+
+Empresas_Tecnologias:
+  
+
+
+
+Colaboradores:
